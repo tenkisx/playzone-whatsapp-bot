@@ -1,0 +1,21 @@
+{
+  "name": "playzone-whatsapp-bot",
+  "version": "1.0.0",
+  "description": "Play Zone — Assistente WhatsApp com IA (Cloud API + Claude + WooCommerce). Recebe e responde encomendas ao nivel expert, com precos reais e sem inventar.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test/e2e.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.1",
+    "express": "^4.19.2"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

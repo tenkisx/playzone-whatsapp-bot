@@ -1,0 +1,35 @@
+# Blueprint Render.com — cria o serviço a partir deste repositório.
+# As variáveis marcadas sync:false são preenchidas por ti no painel do Render (secretos).
+services:
+  - type: web
+    name: playzone-whatsapp-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: GRAPH_API_VERSION
+        value: v21.0
+      - key: WHATSAPP_PHONE_NUMBER_ID
+        value: "1174583372405366"
+      - key: AI_MODEL
+        value: claude-sonnet-5
+      - key: WOO_BASE_URL
+        value: https://playzone.ao
+      - key: TEAM_ALERT_NUMBERS
+        value: "244923170487"
+      - key: WHATSAPP_TOKEN
+        sync: false
+      - key: WHATSAPP_VERIFY_TOKEN
+        sync: false
+      - key: WHATSAPP_APP_SECRET
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: WOO_CONSUMER_KEY
+        sync: false
+      - key: WOO_CONSUMER_SECRET
+        sync: false
